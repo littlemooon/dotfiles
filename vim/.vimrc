@@ -41,7 +41,7 @@ set completeopt-=preview
 set sessionoptions=blank,curdir,folds,help,tabpages,winsize
 
 " run vundle
-set rtp+=~/.config/.vim/bundle/Vundle.vim
+set rtp+=~/.config/vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jelera/vim-javascript-syntax'

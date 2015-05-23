@@ -1,6 +1,6 @@
 # load antigen
 export ANTIGEN_DEFAULT_REPO_URL=https://github.com/sharat87/oh-my-zsh.git
-source ~/.config/.zsh/antigen.zsh
+source ~/.config/zsh/antigen.zsh
 
 # load oh-my-zsh
 antigen use oh-my-zsh
@@ -67,4 +67,4 @@ alias .='cd ..'
 export EDITOR=/usr/bin/vim
 
 # run tmuxinator
-source ~/.config/.zsh/tmuxinator.zsh
+source ~/.config/zsh/tmuxinator.zsh
