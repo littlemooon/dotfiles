@@ -1,3 +1,4 @@
+DIR=$( cd "$( dirname "$0" )" && pwd )
 
 # install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -13,18 +14,22 @@ brew install tmux
 git config --global credential.helper osxkeychain
 
 # download antigen
-curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.config/zsh/antigen.zsh
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $DIR/zsh/antigen.zsh
 
 # download fira code font
-curl -L https://github.com/tonsky/FiraCode/releases/download/0.3/FiraCode-Regular.otf > $HOME/.config/FiraCode-Regular.otf
+curl -L https://github.com/tonsky/FiraCode/releases/download/0.3/FiraCode-Regular.otf > $DIR/FiraCode-Regular.otf
+
+# install vundle bundles
+git clone https://github.com/gmarik/Vundle.vim.git $DIR/vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # set config when zshenv is run
-cat <<EOM > $HOME/.zshenv
+cat <<EOM > $DIR/zsh/.zshenv
 # don't load default zshrc
 setopt no_global_rcs
 
 # environmnet variables
-export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="$DIR"
 # move zsh config to $XDG_CONFIG_HOME
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 # move vim config to $XDG_CONFIG_HOME
