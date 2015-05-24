@@ -68,4 +68,4 @@ alias .='cd ..'
 export EDITOR=/usr/bin/vim
 
 # run tmuxinator
-source ~/.config/zsh/tmuxinator.zsh
+source ~/.config/tmux/tmuxinator.zsh
