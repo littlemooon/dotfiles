@@ -63,6 +63,9 @@ chpwd_functions=( auto-ls $chpwd_functions )
 
 # additional aliases
 alias .='cd ..'
+alias npmclear='sudo rm -rf node_modules && sudo npm cache clean && npm i'
+alias zshrc='vim ~/.config/zsh/.zshrc'
+alias rezsh='source ~/.config/zsh/.zshrc'
 
 # set vim as default
 export EDITOR=/usr/bin/vim
