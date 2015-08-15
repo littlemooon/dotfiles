@@ -7,7 +7,6 @@ brew doctor # if this fails run: export PATH="/usr/local/bin:$PATH"
 
 echo '--- installing packages'
 brew install nvm
-nvm install stable
 brew install git
 brew install tmux
 brew install caskroom/cask/brew-cask
@@ -36,6 +35,9 @@ brew cask install font-fira-sans
 brew cask install font-fira-code
 brew cask install font-droid-sans
 brew cask install font-droid-sans-mono
+
+echo '--- installing node'
+nvm install stable
 
 echo '--- downloading vundle'
 git clone https://github.com/gmarik/Vundle.vim.git $DIR/vim/bundle/Vundle.vim
