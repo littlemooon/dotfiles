@@ -12,6 +12,7 @@ brew install tmux
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install alfred
+brew cask alfred link
 brew cask install keepingyouawake
 brew cask install google-chrome
 brew cask install firefoxdeveloperedition
@@ -29,12 +30,14 @@ brew cask install sublime-text
 brew cask install skype
 brew cask install lastpass
 brew cask install vlc
+brew cask install github-desktop
 brew tap caskroom/fonts
 brew cask install font-inconsolata
 brew cask install font-fira-sans
 brew cask install font-fira-code
 brew cask install font-droid-sans
 brew cask install font-droid-sans-mono
+brew cask cleanup
 
 echo '--- installing node'
 nvm install stable
