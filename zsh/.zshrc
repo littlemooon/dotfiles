@@ -72,3 +72,7 @@ export EDITOR=/usr/bin/vim
 
 # run tmuxinator
 source ~/.config/tmux/tmuxinator.zsh
+
+# run nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh

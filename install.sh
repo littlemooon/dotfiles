@@ -29,9 +29,6 @@ brew cask install font-droid-sans
 brew cask install font-droid-sans-mono
 brew cask cleanup
 
-echo '--- installing node'
-nvm install stable
-
 echo '--- downloading vundle'
 git clone https://github.com/gmarik/Vundle.vim.git $DIR/vim/bundle/Vundle.vim
 
