@@ -1,14 +1,6 @@
 DIR=$( cd "$( dirname "$0" )" && pwd )
 
-echo '--- installing homebrew'
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew doctor # if this fails run: export PATH="/usr/local/bin:$PATH"
-
 echo '--- installing packages'
-brew install nvm
-brew install git
-brew install tmux
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install alfred
@@ -25,10 +17,8 @@ brew cask install gfxcardstatus
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install slack
-brew cask install boom
-brew cask install sublime-text
+brew cask install sublime-text3
 brew cask install skype
-brew cask install lastpass
 brew cask install vlc
 brew cask install github-desktop
 brew tap caskroom/fonts
