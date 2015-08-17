@@ -13,7 +13,6 @@ brew cask install flux
 brew cask install bartender
 brew cask install dash
 brew cask install spotify
-brew cask install gfxcardstatus
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install slack
