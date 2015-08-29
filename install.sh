@@ -1,33 +1,5 @@
 DIR=$( cd "$( dirname "$0" )" && pwd )
 
-echo '--- installing packages'
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
-brew cask install alfred
-brew cask alfred link
-brew cask install keepingyouawake
-brew cask install google-chrome
-brew cask install firefoxdeveloperedition
-brew cask install bettertouchtool
-brew cask install flux
-brew cask install bartender
-brew cask install dash
-brew cask install spotify
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install slack
-brew cask install sublime-text3
-brew cask install skype
-brew cask install vlc
-brew cask install github-desktop
-brew tap caskroom/fonts
-brew cask install font-inconsolata
-brew cask install font-fira-sans
-brew cask install font-fira-code
-brew cask install font-droid-sans
-brew cask install font-droid-sans-mono
-brew cask cleanup
-
 echo '--- downloading vundle'
 git clone https://github.com/gmarik/Vundle.vim.git $DIR/vim/bundle/Vundle.vim
 
@@ -55,3 +27,31 @@ chsh -s /bin/zsh
 
 echo '--- installing vundle bundles'
 vim +PluginInstall +qall
+
+echo '--- installing apps'
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+brew cask install alfred
+brew cask alfred link
+brew cask install keepingyouawake
+brew cask install google-chrome
+brew cask install firefoxdeveloperedition
+brew cask install bettertouchtool
+brew cask install flux
+brew cask install bartender
+brew cask install dash
+brew cask install spotify
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install slack
+brew cask install sublime-text3
+brew cask install skype
+brew cask install vlc
+brew cask install github-desktop
+brew tap caskroom/fonts
+brew cask install font-inconsolata
+brew cask install font-fira-sans
+brew cask install font-fira-code
+brew cask install font-droid-sans
+brew cask install font-droid-sans-mono
+brew cask cleanup
