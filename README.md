@@ -20,13 +20,6 @@
 ### run installation
 - bash ~/.config/install.sh
 
-### setup terminal
-- open terminal preferences
-- set font to Fira Code
-- import OceanicNext.terminal theme
-- set OceanicNext to default
-- restart terminal
-
 ### install tmuxinator
 - gem install tmuxinator
 
@@ -35,3 +28,13 @@
 - source $(brew --prefix nvm)/nvm.sh
 - nvm install stable
 - nvm alias default stable
+
+### show hidden files
+- defaults write com.apple.finder AppleShowAllFiles YES
+
+### setup terminal
+- open terminal preferences
+- set font to Fira Code
+- import OceanicNext.terminal theme
+- set OceanicNext to default
+- restart terminal
