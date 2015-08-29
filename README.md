@@ -1,5 +1,8 @@
 # computer setup
 
+### install ruby
+- \curl -sSL https://get.rvm.io | bash -s stable --ruby
+
 ### install homebrew
 - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 - brew update
@@ -28,5 +31,5 @@
 - gem install tmuxinator
 
 ### install node
-nvm install stable
-nvm alias default stable
+- nvm install stable
+- nvm alias default stable
