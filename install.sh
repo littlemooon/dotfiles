@@ -20,6 +20,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="\$XDG_CONFIG_HOME/zsh"
 # move vim config to $XDG_CONFIG_HOME
 export VIMINIT='let \$MYVIMRC="\$XDG_CONFIG_HOME/vim/vimrc" | source \$MYVIMRC'
+
+# load zprofile
+if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+
+# load nvm
+export NVM_DIR=~/.nvm
+if [[ -s $(brew --prefix nvm)/nvm.sh ]]; then
+  source $(brew --prefix nvm)/nvm.sh
+fi
 EOM
 
 echo '--- set zsh as default:'
