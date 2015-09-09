@@ -61,6 +61,16 @@ antigen apply
 auto-ls () { ls; }
 chpwd_functions=( auto-ls $chpwd_functions )
 
+# git helpers
+zc () { git checkout $1; }
+zb () { git checkout -b $1 -t develop; }
+zs () { git status; }
+za () { git add --all .; }
+zcm () { git commit -m $*; }
+zup () { git pull --rebase origin develop; }
+zp () { git push -u origin $(current_branch); }
+zl() { git log --graph --decorate --all; }
+
 # additional aliases
 alias .='cd ..'
 alias npmclear='sudo rm -rf node_modules && sudo npm cache clean && npm i'
