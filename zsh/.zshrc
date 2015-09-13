@@ -76,6 +76,7 @@ alias .='cd ..'
 alias npmclear='sudo rm -rf node_modules && sudo npm cache clean && npm i'
 alias zshrc='vim ~/.config/zsh/.zshrc'
 alias rezsh='source ~/.config/zsh/.zshrc'
+muxkill () { tmux kill-session -t $1; }
 
 # set vim as default
 export EDITOR=/usr/bin/vim
