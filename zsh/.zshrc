@@ -70,6 +70,8 @@ zcm () { git commit -m $*; }
 zup () { git pull --rebase origin develop; }
 zp () { git push -u origin $(current_branch); }
 zl() { git log --graph --decorate --all; }
+zf() { git fetch; }
+zd() { git diff; }
 
 # additional aliases
 alias .='cd ..'
