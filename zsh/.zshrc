@@ -66,8 +66,8 @@ zc () { git checkout $1; }
 zb () { git checkout -b $1 -t develop; }
 zs () { git status; }
 za () { git add --all .; }
-zcm () { git commit -m $*; }
-zup () { git pull --rebase origin develop; }
+zm () { git commit -m $*; }
+zu () { git pull --rebase origin develop; }
 zp () { git push -u origin $(current_branch); }
 zl() { git log --graph --decorate --all; }
 zf() { git fetch; }
