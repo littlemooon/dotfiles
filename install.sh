@@ -59,6 +59,8 @@ brew cask install sublime-text3
 brew cask install skype
 brew cask install vlc
 brew cask install github-desktop
+brew install mysql
+brew cask install sequel-pro
 brew tap caskroom/fonts
 brew cask install font-inconsolata
 brew cask install font-fira-sans
