@@ -62,6 +62,8 @@ brew cask install skype
 brew cask install java
 brew cask install vlc
 brew cask install github-desktop
+brew cask install transmission
+brew cask install goofy
 brew cask install sequel-pro
 brew tap caskroom/fonts
 brew cask install font-inconsolata
