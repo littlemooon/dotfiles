@@ -1,3 +1,6 @@
+# update path
+export PATH=/usr/local/bin:$PATH:/usr/local:/usr/sbin
+
 # load antigen
 export ANTIGEN_DEFAULT_REPO_URL=https://github.com/sharat87/oh-my-zsh.git
 source ~/.config/zsh/antigen.zsh
