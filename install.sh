@@ -28,8 +28,8 @@ fi
 
 # load nvm
 export NVM_DIR=~/.nvm
-if [[ -s $(brew --prefix nvm)/nvm.sh ]]; then
-  source $(brew --prefix nvm)/nvm.sh
+if [[ -s $(/usr/local/bin/brew --prefix nvm)/nvm.sh ]]; then
+  source $(/usr/local/bin/brew --prefix nvm)/nvm.sh
 fi
 EOM
 
