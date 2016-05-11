@@ -78,9 +78,28 @@ zd() { git diff; }
 
 # additional aliases
 alias .='cd ..'
-alias npmclear='sudo rm -rf node_modules && sudo npm cache clean && npm i'
 alias zshrc='vim ~/.config/zsh/.zshrc'
 alias rezsh='source ~/.config/zsh/.zshrc'
+
+alias ri='clear && bundle install’
+alias rc='clear && bundle exec rails console'
+alias rs='clear && bundle exec rails server'
+alias rt='clear && bundle exec rspec'
+alias rl='clear && bundle exec rubocop'
+
+alias vr='clear && vagrant resume'
+alias vu='clear && vagrant up'
+
+alias li='clear && lein install’
+alias lm='clear && lein migrate'
+alias ly='clear && lein sync’
+
+alias ni=‘clear && npm i'
+alias nc='clear && sudo rm -rf node_modules && sudo npm cache clean && npm i'
+alias ns='clear && npm start'
+alias nt='clear && npm test'
+alias npmclear=‘clear && sudo rm -rf node_modules && sudo npm cache clean && npm i'
+
 muxkill () { tmux kill-session -t $1; }
 
 # set vim as default
