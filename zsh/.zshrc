@@ -67,19 +67,21 @@ chpwd_functions=( auto-ls $chpwd_functions )
 # git helpers
 zc () { git checkout $1; }
 zb () { git checkout -b $1 -t develop; }
-zs () { git status; }
-za () { git add --all .; }
 zm () { git commit -m $*; }
-zu () { git pull --rebase origin develop; }
 zp () { git push -u origin $(current_branch); }
-zl() { git log --graph --decorate --all; }
-zf() { git fetch; }
-zd() { git diff; }
 
 # additional aliases
 alias .='cd ..'
 alias zshrc='vim ~/.config/zsh/.zshrc'
 alias rezsh='source ~/.config/zsh/.zshrc'
+
+alias zs='git status'
+alias za='git add --all .'
+alias zu='clear && git pull --rebase origin develop'
+alias zup='git stash && zu && git stash pop'
+alias zl='clear && git log --graph --decorate --all'
+alias zf='git fetch'
+alias zd='git diff'
 
 alias ri='clear && bundle install’
 alias rc='clear && bundle exec rails console'
