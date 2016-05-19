@@ -43,25 +43,20 @@ echo '--- installing apps'
 brew install mysql
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
-brew cask install alfred
-brew cask alfred link
 brew cask install keepingyouawake
 brew cask install google-chrome
 brew cask install chromecast
 brew cask install tunnelblick
 brew cask install bettertouchtool
 brew cask install flux
-brew cask install dash
 brew cask install spotify
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install slack
 brew cask install atom
-brew cask install skype
 brew cask install java
 brew cask install vlc
-brew cask install github-desktop
 brew cask install transmission
 brew cask install franz
 brew cask install sequel-pro
