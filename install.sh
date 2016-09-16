@@ -1,15 +1,19 @@
 DIR=$( cd "$( dirname "$0" )" && pwd )
 
-echo '--- downloading vundle'
+echo '--- node'
+brew install nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+nvm install stable
+nvm alias default stable
+
+echo '--- vundle'
 git clone https://github.com/gmarik/Vundle.vim.git $DIR/vim/bundle/Vundle.vim
-
-echo '--- setting git keychain'
-git config --global credential.helper osxkeychain
-
-echo '--- downloading antigen'
 curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $DIR/zsh/antigen.zsh
+vim +PluginInstall +qall
 
-echo '--- setting zshenv'
+echo '--- zsh'
+chsh -s /bin/zsh
 cat <<EOM > $HOME/.zshenv
 # don't load default zshrc
 setopt no_global_rcs
@@ -33,14 +37,13 @@ if [[ -s $(/usr/local/bin/brew --prefix nvm)/nvm.sh ]]; then
 fi
 EOM
 
-echo '--- set zsh as default:'
-chsh -s /bin/zsh
+echo '--- tmux'
+brew install tmux
+gem install tmuxinator
 
-echo '--- installing vundle bundles'
-vim +PluginInstall +qall
-
-echo '--- installing apps'
+echo '--- apps'
 brew install mysql
+brew install leiningen
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install keepingyouawake
@@ -68,6 +71,8 @@ brew cask install font-droid-sans
 brew cask install font-droid-sans-mono
 brew cask cleanup
 
+echo '--- atom'
+cp -a ~/.config/atom/. /Users/fred/.atom/
 apm install atom-beautify
 apm install atom-prettify
 apm install auto-detect-indentation
@@ -88,3 +93,7 @@ apm install project-manager
 apm install react
 apm install react-snippets
 apm install spacegray-dark-neue-ui
+
+echo '--- osx settings'
+git config --global credential.helper osxkeychain
+defaults write com.apple.finder AppleShowAllFiles YES
