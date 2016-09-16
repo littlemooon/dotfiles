@@ -29,10 +29,6 @@ EOBUNDLES
 add-zsh-hook precmd _z_precmd
 function _z_precmd { _z --add "$PWD" }
 
-# setup autosuggestions
-zle-line-init() { zle autosuggest-start }
-zle -N zle-line-init
-
 # bind UP and DOWN arrow keys to history search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -45,7 +41,7 @@ PROMPT='
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✘"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}X"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$fg[red]%}?"
 ZSH_THEME_GIT_PROMPT_ADDED=" %{$fg[red]}+"
 ZSH_THEME_GIT_PROMPT_DELETED=" %{$fg[red]}-"
@@ -54,7 +50,7 @@ ZSH_THEME_GIT_PROMPT_UNMERGED=" %{$fg[red]}*"
 ZSH_THEME_GIT_PROMPT_MODIFIED=" %{$fg[red]}!"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-local return_status="%{$fg[red]%}%(?..✘)%{$reset_color%}"
+local return_status="%{$fg[red]%}%(?..X)%{$reset_color%}"
 RPROMPT='${return_status}'
 
 # apply the above
@@ -75,34 +71,49 @@ alias .='cd ..'
 alias zshrc='vim ~/.config/zsh/.zshrc'
 alias rezsh='source ~/.config/zsh/.zshrc'
 
+alias cl='clear'
+
 alias zs='git status'
 alias za='git add --all .'
-alias zu='clear && git pull --rebase origin develop'
+alias zu='cl && git pull --rebase origin develop'
 alias zup='git stash && zu && git stash pop'
-alias zl='clear && git log --graph --decorate --all'
+alias zl='cl && git log --graph --decorate --all'
 alias zf='git fetch'
 alias zd='git diff'
+alias zcd='git checkout develop'
 
-alias ri='clear && bundle install’
-alias rc='clear && bundle exec rails console'
-alias rs='clear && bundle exec rails server'
-alias rt='clear && bundle exec rspec'
-alias rl='clear && bundle exec rubocop'
+alias ri='cl && bundle install'
+alias rc='cl && bundle exec rails console'
+alias rs='cl && bundle exec rails server -b 0.0.0.0'
+alias rsp='cl && ELASTICSEARCH_URL=http://elasticsearch.albacross.com bundle exec rails server -b 0.0.0.0'
+alias rt='cl && bundle exec rspec'
+alias rl='cl && bundle exec rubocop'
 
-alias vr='clear && vagrant resume'
-alias vu='clear && vagrant up'
+alias vr='cl && vagrant resume'
+alias vu='cl && vagrant up'
+alias vh='cl && vagrant halt'
 
-alias li='clear && lein install’
-alias lm='clear && lein migrate'
-alias ly='clear && lein sync’
+alias li='cl && lein install'
+alias lm='cl && lein migrate'
+alias ly='cl && lein sync'
 
-alias ni=‘clear && npm i'
-alias nc='clear && sudo rm -rf node_modules && sudo npm cache clean && npm i'
-alias ns='clear && npm start'
-alias nt='clear && npm test'
-alias npmclear=‘clear && sudo rm -rf node_modules && sudo npm cache clean && npm i'
+alias ni='cl && npm i'
+alias nc='cl && sudo rm -rf node_modules && sudo npm cache clean && npm i'
+alias ns='cl && npm start'
+alias sns='cl && APP=starship npm start'
+alias wns='cl && APP=web npm start'
+alias rns='cl && APP=reporter npm start'
+alias nt='cl && npm test'
+alias snt='cl && APP=starship npm test'
+alias wnt='cl && APP=web npm test'
+alias rnt='cl && APP=reporter npm test'
+alias nl='cl && npm run lint'
+alias npmclear='cl && sudo rm -rf node_modules && sudo npm cache clean && npm i'
+
+alias bastion='ssh-add ~/.ssh/id_rsa && ssh-add ~/.ssh/NosivaLaravel.pem && ssh -A fred@vpn.albacross.com'
 
 muxkill () { tmux kill-session -t $1; }
+killprocess () { kill $(ps aux | grep $1 | awk '{print $2}') }
 
 # set vim as default
 export EDITOR=/usr/bin/vim
@@ -113,3 +124,6 @@ source ~/.config/tmux/tmuxinator.zsh
 # run nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# run rbenv
+eval "$(rbenv init -)"
