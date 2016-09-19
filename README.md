@@ -12,9 +12,12 @@ brew install git
 
 git clone --recursive https://github.com/littlemooon/dot.git ~/.config
 
+```
+```
 # install all
 bash ~/.config/install.sh
-
+```
+```
 # or select from
 bash ~/.config/install_ruby.sh
 bash ~/.config/install_node.sh
