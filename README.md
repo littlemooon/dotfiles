@@ -1,6 +1,6 @@
 # computer setup
 
-Computer reformatting dotfiles, including helpful aliases. Used to setup:
+Reinstallation dotfiles, including helpful aliases. Used to setup:
 - [rvm](https://rvm.io) (ruby 2.3.0)
 - [homebrew](http://brew.sh)
 - [nvm](https://github.com/creationix/nvm) (node latest)
