@@ -1,5 +1,16 @@
 # computer setup
 
+Computer reformatting dotfiles, including helpful aliases. Used to setup:
+- [rvm](https://rvm.io) (ruby 2.3.0)
+- [homebrew](http://brew.sh)
+- [nvm](https://github.com/creationix/nvm) (node latest)
+- [tmuxinator](https://github.com/tmuxinator/tmuxinator)
+- [zsh](https://github.com/robbyrussell/oh-my-zsh) and [antigen](https://github.com/zsh-users/antigen)
+- a bunch of [apps](https://github.com/littlemooon/dot/blob/master/install_apps.sh), more can be found [here](https://caskroom.github.io/search)
+- [atom](https://atom.io) for react development
+- [albacross](https://github.com/albacross) projects for frontend/api dev
+
+
 ### installation
 ```
 curl -sSL https://get.rvm.io | bash -s stable --ruby
