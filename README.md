@@ -11,7 +11,6 @@ brew update && brew doctor
 brew install git
 
 git clone --recursive https://github.com/littlemooon/dot.git ~/.config
-
 ```
 ```
 # install all
