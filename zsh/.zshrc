@@ -4,6 +4,7 @@ export PATH=/usr/local/bin:$PATH:/usr/local:/usr/sbin
 # load antigen
 export ANTIGEN_DEFAULT_REPO_URL=https://github.com/sharat87/oh-my-zsh.git
 source ~/.config/zsh/antigen.zsh
+autoload -U add-zsh-hook
 
 # load oh-my-zsh
 antigen use oh-my-zsh
@@ -31,27 +32,8 @@ function _z_precmd { _z --add "$PWD" }
 
 # bind UP and DOWN arrow keys to history search
 zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-
-# prompt theme
-PROMPT='
-%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[blue]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%}$(git_prompt_info)
-- '
-
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[yellow]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}X"
-ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$fg[red]%}?"
-ZSH_THEME_GIT_PROMPT_ADDED=" %{$fg[red]}+"
-ZSH_THEME_GIT_PROMPT_DELETED=" %{$fg[red]}-"
-ZSH_THEME_GIT_PROMPT_RENAMED=" %{$fg[red]}%%"
-ZSH_THEME_GIT_PROMPT_UNMERGED=" %{$fg[red]}*"
-ZSH_THEME_GIT_PROMPT_MODIFIED=" %{$fg[red]}!"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
-
-local return_status="%{$fg[red]%}%(?..X)%{$reset_color%}"
-RPROMPT='${return_status}'
+# bindkey "$terminfo[kcuu1]" history-substring-search-up
+# bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # apply the above
 antigen apply
@@ -121,9 +103,28 @@ export EDITOR=/usr/bin/vim
 # run tmuxinator
 source ~/.config/tmux/tmuxinator.zsh
 
-# run nvm
+# run nvmadd
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-# run rbenv
-eval "$(rbenv init -)"
+# run rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# prompt theme
+PROMPT='
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[blue]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%}$(git_prompt_info)
+- '
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}X"
+ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$fg[red]%}?"
+ZSH_THEME_GIT_PROMPT_ADDED=" %{$fg[red]}+"
+ZSH_THEME_GIT_PROMPT_DELETED=" %{$fg[red]}-"
+ZSH_THEME_GIT_PROMPT_RENAMED=" %{$fg[red]}%%"
+ZSH_THEME_GIT_PROMPT_UNMERGED=" %{$fg[red]}*"
+ZSH_THEME_GIT_PROMPT_MODIFIED=" %{$fg[red]}!"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+local return_status="%{$fg[red]%}%(?..X)%{$reset_color%}"
+RPROMPT='${return_status}'
