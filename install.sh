@@ -1,3 +1,4 @@
+bash ./install_ruby.sh
 bash ./install_node.sh
 bash ./install_tmux.sh
 bash ./install_apps.sh
