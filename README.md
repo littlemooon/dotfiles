@@ -10,8 +10,6 @@ brew doctor
 brew install git
 git clone --recursive https://github.com/littlemooon/dot.git ~/.config
 bash ~/.config/install.sh
-bash ~/.config/install_apps.sh
-bash ~/.config/install_atom.sh
 ```
 
 ### terminal
