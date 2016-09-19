@@ -41,59 +41,6 @@ echo '--- tmux'
 brew install tmux
 gem install tmuxinator
 
-echo '--- apps'
-brew install mysql
-brew install leiningen
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
-brew cask install keepingyouawake
-brew cask install google-chrome
-brew cask install chromecast
-brew cask install tunnelblick
-brew cask install bettertouchtool
-brew cask install flux
-brew cask install spotify
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install vagrant-manager
-brew cask install slack
-brew cask install atom
-brew cask install java
-brew cask install vlc
-brew cask install transmission
-brew cask install franz
-brew cask install sequel-pro
-brew tap caskroom/fonts
-brew cask install font-inconsolata
-brew cask install font-fira-sans
-brew cask install font-fira-code
-brew cask install font-droid-sans
-brew cask install font-droid-sans-mono
-brew cask cleanup
-
-echo '--- atom'
-cp -a ~/.config/atom/. /Users/fred/.atom/
-apm install atom-beautify
-apm install atom-prettify
-apm install auto-detect-indentation
-apm install autoclose-html
-apm install dracula-theme
-apm install file-icons
-apm install highlight-selected
-apm install language-babel
-apm install language-ejs
-apm install lines
-apm install linter
-apm install linter-clojure
-apm install linter-eslint
-apm install linter-rubocop
-apm install oceanic-next
-apm install pretty-json
-apm install project-manager
-apm install react
-apm install react-snippets
-apm install spacegray-dark-neue-ui
-
 echo '--- osx settings'
 git config --global credential.helper osxkeychain
 defaults write com.apple.finder AppleShowAllFiles YES
