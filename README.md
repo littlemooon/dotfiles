@@ -16,7 +16,7 @@ Reinstallation dotfiles, including helpful aliases. Used to setup:
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 rvm install 2.3.0
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew doctor
 
 brew install git
