@@ -42,18 +42,17 @@ antigen apply
 auto-ls () { ls; }
 chpwd_functions=( auto-ls $chpwd_functions )
 
+#aliases
+alias .='cd ..'
+alias zshrc='vim ~/.config/zsh/.zshrc'
+alias rezsh='source ~/.config/zsh/.zshrc'
+alias cl='clear'
+
 # git helpers
 zc () { git checkout $1; }
 zb () { git checkout -b $1 -t develop; }
 zm () { git commit -m $*; }
 zp () { git push -u origin $(current_branch); }
-
-# additional aliases
-alias .='cd ..'
-alias zshrc='vim ~/.config/zsh/.zshrc'
-alias rezsh='source ~/.config/zsh/.zshrc'
-
-alias cl='clear'
 
 alias zs='git status'
 alias za='git add --all .'
@@ -64,6 +63,7 @@ alias zf='git fetch'
 alias zd='git diff'
 alias zcd='git checkout develop'
 
+# project helpers
 alias ri='cl && bundle install'
 alias rc='cl && bundle exec rails console'
 alias rs='cl && bundle exec rails server -b 0.0.0.0'
@@ -92,8 +92,7 @@ alias rnt='cl && APP=reporter npm test'
 alias nl='cl && npm run lint'
 alias npmclear='cl && sudo rm -rf node_modules && sudo npm cache clean && npm i'
 
-alias bastion='ssh-add ~/.ssh/id_rsa && ssh-add ~/.ssh/NosivaLaravel.pem && ssh -A fred@vpn.albacross.com'
-
+# process helpers
 muxkill () { tmux kill-session -t $1; }
 killprocess () { kill $(ps aux | grep $1 | awk '{print $2}') }
 
