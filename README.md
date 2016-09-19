@@ -11,7 +11,17 @@ brew update && brew doctor
 brew install git
 
 git clone --recursive https://github.com/littlemooon/dot.git ~/.config
+
+# install all
 bash ~/.config/install.sh
+
+# or select from
+bash ~/.config/install_ruby.sh
+bash ~/.config/install_node.sh
+bash ~/.config/install_tmux.sh
+bash ~/.config/install_apps.sh
+bash ~/.config/install_atom.sh
+bash ~/.config/install_work.sh
 ```
 
 ### terminal
