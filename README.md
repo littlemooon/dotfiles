@@ -1,4 +1,4 @@
-# computer setup
+# Computer setup
 
 Reinstallation dotfiles, including helpful aliases. Used to setup:
 - [rvm](https://rvm.io) (ruby 2.3.0)
@@ -11,7 +11,7 @@ Reinstallation dotfiles, including helpful aliases. Used to setup:
 - [albacross](https://github.com/albacross) projects for frontend/api dev
 
 
-### installation
+### Installation
 ```
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 rvm install 2.3.0
@@ -37,14 +37,14 @@ bash ~/.config/install_atom.sh
 bash ~/.config/install_albacross.sh
 ```
 
-### terminal
+### Terminal
 - open terminal preferences
 - set font to Fira Code
 - import OceanicNext.terminal theme
 - set OceanicNext to default
 - restart terminal
 
-### aliases
+### Aliases
 ```
 alias .='cd ..'
 alias zshrc='vim ~/.config/zsh/.zshrc'
