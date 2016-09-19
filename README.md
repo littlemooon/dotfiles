@@ -6,7 +6,7 @@ Computer reformatting dotfiles, including helpful aliases. Used to setup:
 - [nvm](https://github.com/creationix/nvm) (node latest)
 - [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 - [zsh](https://github.com/robbyrussell/oh-my-zsh) and [antigen](https://github.com/zsh-users/antigen)
-- a bunch of [apps](https://github.com/littlemooon/dot/blob/master/install_apps.sh), more can be found [here](https://caskroom.github.io/search)
+- a bunch of [apps](https://github.com/littlemooon/dotfiles/blob/master/install_apps.sh), more can be found [here](https://caskroom.github.io/search)
 - [atom](https://atom.io) for react development
 - [albacross](https://github.com/albacross) projects for frontend/api dev
 
@@ -21,7 +21,7 @@ brew update && brew doctor
 
 brew install git
 
-git clone --recursive https://github.com/littlemooon/dot.git ~/.config
+git clone --recursive https://github.com/littlemooon/dotfiles.git ~/.config
 ```
 ```
 # install all
