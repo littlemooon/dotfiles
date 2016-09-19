@@ -1,4 +1,3 @@
-
 echo '--- atom'
 brew cask install atom
 cp -a ~/.config/atom/. /Users/fred/.atom/

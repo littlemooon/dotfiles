@@ -1,4 +1,3 @@
-
 echo '--- apps'
 brew install mysql
 brew install leiningen

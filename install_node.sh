@@ -1,4 +1,3 @@
-
 echo '--- node'
 brew install nvm
 export NVM_DIR=~/.nvm

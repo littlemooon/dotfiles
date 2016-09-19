@@ -1,4 +1,5 @@
 DIR=$( cd "$( dirname "$0" )" && pwd )
+cp -a ~/.config/tmux/. ~/
 
 echo '--- vundle'
 git clone https://github.com/gmarik/Vundle.vim.git $DIR/vim/bundle/Vundle.vim
