@@ -40,7 +40,8 @@ alias .='cd ..'
 alias zshrc='vim ~/.config/zsh/.zshrc'
 alias rezsh='source ~/.config/zsh/.zshrc'
 alias cl='clear'
-
+```
+```
 # git helpers
 zc () { git checkout $1; }
 zb () { git checkout -b $1 -t develop; }
@@ -55,7 +56,8 @@ alias zl='cl && git log --graph --decorate --all'
 alias zf='git fetch'
 alias zd='git diff'
 alias zcd='git checkout develop'
-
+```
+```
 # project helpers
 alias ri='cl && bundle install'
 alias rc='cl && bundle exec rails console'
@@ -84,7 +86,8 @@ alias wnt='cl && APP=web npm test'
 alias rnt='cl && APP=reporter npm test'
 alias nl='cl && npm run lint'
 alias npmclear='cl && sudo rm -rf node_modules && sudo npm cache clean && npm i'
-
+```
+```
 # process helpers
 muxkill () { tmux kill-session -t $1; }
 killprocess () { kill $(ps aux | grep $1 | awk '{print $2}') }
