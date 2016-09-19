@@ -34,7 +34,7 @@ bash ~/.config/install_node.sh
 bash ~/.config/install_tmux.sh
 bash ~/.config/install_apps.sh
 bash ~/.config/install_atom.sh
-bash ~/.config/install_work.sh
+bash ~/.config/install_albacross.sh
 ```
 
 ### terminal

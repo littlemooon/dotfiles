@@ -3,7 +3,7 @@ bash ./install_node.sh
 bash ./install_tmux.sh
 bash ./install_apps.sh
 bash ./install_atom.sh
-bash ./install_work.sh
+bash ./install_albacross.sh
 
 echo '--- osx settings'
 git config --global credential.helper osxkeychain
