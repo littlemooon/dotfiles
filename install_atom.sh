@@ -15,6 +15,7 @@ apm install linter
 apm install linter-clojure
 apm install linter-eslint
 apm install linter-rubocop
+apm install linter-sass-lint
 apm install oceanic-next
 apm install pretty-json
 apm install project-manager
