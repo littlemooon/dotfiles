@@ -1,42 +1,6 @@
-# update path
-export PATH=/usr/local/bin:$PATH:/usr/local:/usr/sbin
-
-# load antigen
-export ANTIGEN_DEFAULT_REPO_URL=https://github.com/sharat87/oh-my-zsh.git
-source ~/.config/zsh/antigen.zsh
-autoload -U add-zsh-hook
-
-# load oh-my-zsh
-antigen use oh-my-zsh
-
-# add bundles
-antigen bundles <<EOBUNDLES
-brew
-npm
-sublime
-osx
-command-not-found
-git
-autojump
-zsh-users/zsh-completions
-zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-history-substring-search
-tarruda/zsh-autosuggestions
-djui/alias-tips
-rupa/z
-EOBUNDLES
-
-# track the most used directories, based on 'frecency'
-add-zsh-hook precmd _z_precmd
-function _z_precmd { _z --add "$PWD" }
-
-# bind UP and DOWN arrow keys to history search
-zmodload zsh/terminfo
-# bindkey "$terminfo[kcuu1]" history-substring-search-up
-# bindkey "$terminfo[kcud1]" history-substring-search-down
-
-# apply the above
-antigen apply
+source <(antibody init)
+antibody bundle < ~/.zsh-plugins.txt >> ~/.zsh-sourceables.sh
+source ~/.zsh-sourceables.sh
 
 # automatic ls on cd
 auto-ls () { ls; }
@@ -95,35 +59,3 @@ alias npmclear='cl && sudo rm -rf node_modules && sudo npm cache clean && npm i'
 # process helpers
 muxkill () { tmux kill-session -t $1; }
 killprocess () { kill $(ps aux | grep $1 | awk '{print $2}') }
-
-# set vim as default
-export EDITOR=/usr/bin/vim
-
-# run tmuxinator
-source ~/.config/tmux/tmuxinator.zsh
-
-# run nvmadd
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# run rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# prompt theme
-PROMPT='
-%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[blue]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%}$(git_prompt_info)
-- '
-
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[yellow]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}X"
-ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$fg[red]%}?"
-ZSH_THEME_GIT_PROMPT_ADDED=" %{$fg[red]}+"
-ZSH_THEME_GIT_PROMPT_DELETED=" %{$fg[red]}-"
-ZSH_THEME_GIT_PROMPT_RENAMED=" %{$fg[red]}%%"
-ZSH_THEME_GIT_PROMPT_UNMERGED=" %{$fg[red]}*"
-ZSH_THEME_GIT_PROMPT_MODIFIED=" %{$fg[red]}!"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
-
-local return_status="%{$fg[red]%}%(?..X)%{$reset_color%}"
-RPROMPT='${return_status}'

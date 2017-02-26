@@ -1,10 +1,6 @@
-bash ./install_ruby.sh
+bash ./install_osx.sh
+bash ./install_zsh.sh
 bash ./install_node.sh
-bash ./install_tmux.sh
 bash ./install_apps.sh
 bash ./install_atom.sh
-bash ./install_albacross.sh
-
-echo '--- osx settings'
-git config --global credential.helper osxkeychain
-defaults write com.apple.finder AppleShowAllFiles YES
+bash ./install_hyper.sh

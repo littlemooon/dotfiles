@@ -1,35 +1,10 @@
-api:
-  title: "api"
+home:
+  title: "home"
   paths: [
-    "/Users/fred/b/api"
+    "/Users/fred"
   ]
-platformdeploy:
-  title: "platform-deploy"
+dotfiles:
+  title: "dotfiles"
   paths: [
-    "/Users/fred/b/platform-deploy"
-  ]
-frontend:
-  title: "frontend"
-  paths: [
-    "/Users/fred/b/frontend"
-  ]
-lambda:
-  title: "lambda"
-  paths: [
-    "/Users/fred/b/lambda"
-  ]
-marciana:
-  title: "marciana"
-  paths: [
-    "/Users/fred/b/marciana"
-  ]
-reporter:
-  title: "reporter"
-  paths: [
-    "/Users/fred/b/reporter"
-  ]
-butler:
-  title: "butler"
-  paths: [
-    "/Users/fred/b/butler"
+    "/Users/fred/a/dotfiles"
   ]
