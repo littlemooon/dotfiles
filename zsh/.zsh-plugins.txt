@@ -6,7 +6,6 @@ molovo/tipz
 rupa/z
 sindresorhus/pretty-time-zsh
 sindresorhus/pure
-srijanshetty/node.plugin.zsh
 tarruda/zsh-autosuggestions
 tomsquest/nvm-auto-use.zsh
 zsh-users/zsh-completions

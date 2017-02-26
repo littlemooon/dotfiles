@@ -1,3 +1,8 @@
+# run nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# load antibody plugins
 source <(antibody init)
 antibody bundle < ~/.zsh-plugins.txt >> ~/.zsh-sourceables.sh
 source ~/.zsh-sourceables.sh
