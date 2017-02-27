@@ -62,5 +62,5 @@ alias nl='cl && npm run lint'
 alias npmclear='cl && sudo rm -rf node_modules && sudo npm cache clean && npm i'
 
 # process helpers
-muxkill () { tmux kill-session -t $1; }
 killprocess () { kill $(ps aux | grep $1 | awk '{print $2}') }
+killport () { kill -9 $(lsof -i tcp:$1 -t) }
