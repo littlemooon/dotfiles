@@ -18,3 +18,4 @@ apm install linter-sass-lint
 apm install pretty-json
 apm install project-manager
 apm install spacegray-dark-neue-ui
+apm install zentabs
