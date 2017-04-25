@@ -100,6 +100,7 @@ module.exports = {
     'hyperfull',
     'hyperlayout',
     'hyperterm-paste',
+    'hyperminimal',
   ],
 
   // in development, you can create a directory under

@@ -1,8 +1,8 @@
 #aliases
 
 alias .='cd ..'
-alias zshrc='vim ~/.config/zsh/.zshrc'
-alias rezsh='source ~/.config/zsh/.zshrc'
+alias zshrc='vim ~/.zshrc'
+alias rezsh='source ~/.zshrc'
 alias cl='clear'
 
 # git helpers
@@ -27,13 +27,14 @@ alias vr='cl && vagrant resume'
 alias vu='cl && vagrant up'
 alias vh='cl && vagrant halt'
 
-alias ni='cl && npm i'
+alias ni='cl && yarn'
 alias nc='cl && sudo rm -rf node_modules && sudo npm cache clean && npm i'
-alias ns='cl && npm start'
-alias nt='cl && npm test'
-alias nl='cl && npm run lint'
+alias ns='cl && yarn start'
+alias nt='cl && yarn test'
+alias nl='cl && yarn run lint'
 
 # process helpers
 
+muxkill () { tmux kill-session -t $1; }
 killprocess () { kill $(ps aux | grep $1 | awk '{print $2}') }
 killport () { kill -9 $(lsof -i tcp:$1 -t) }
