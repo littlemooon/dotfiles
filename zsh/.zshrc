@@ -1,6 +1,7 @@
-# run nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+export EDITOR='vim'
+
+# load rvm
+source ~/.rvm/scripts/rvm
 
 # load antibody plugins
 source <(antibody init)
@@ -13,3 +14,6 @@ chpwd_functions=( auto-ls $chpwd_functions )
 
 # load aliases
 source ~/.zsh-aliases.sh
+
+# load tmuxinator
+source ~/tmuxinator.zsh
