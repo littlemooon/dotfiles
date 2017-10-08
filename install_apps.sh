@@ -11,6 +11,7 @@ brew cask install franz
 brew cask install github-desktop
 brew cask install google-chrome
 brew cask install spotify
+brew cask install totalspaces
 brew cask install visual-studio-code
 brew cask install vlc
 
