@@ -4,6 +4,7 @@ alias .='cd ..'
 alias zshrc='vim ~/.zshrc'
 alias rezsh='source ~/.zshrc'
 alias cl='clear'
+alias mux='tmuxinator'
 
 # git helpers
 
