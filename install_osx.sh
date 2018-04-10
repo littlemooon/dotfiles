@@ -2,6 +2,8 @@ echo '--- osx'
 
 defaults write com.apple.finder AppleShowAllFiles YES
 
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
+
 xcode-select --install
 
 git config --global push.default simple
