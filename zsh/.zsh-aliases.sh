@@ -49,6 +49,13 @@ alias vr='cl && vagrant resume'
 alias vu='cl && vagrant up'
 alias vh='cl && vagrant halt'
 
+alias hl='heroku logs --tail --app'
+alias hb='heroku run bash --app'
+alias hlm='hl bitrefill-dashboard'
+alias hbm='hb bitrefill-dashboard'
+alias hld='hl bitrefill-dashboard-dev'
+alias hbd='hb bitrefill-dashboard-dev'
+
 # process helpers
 
 muxkill () { tmux kill-session -t $1; }
