@@ -1,8 +1,5 @@
 export EDITOR='vim'
 
-# load rvm
-source ~/.rvm/scripts/rvm
-
 # load antibody plugins
 source <(antibody init)
 antibody bundle < ~/.zsh-plugins.txt >> ~/.zsh-sourceables.sh
@@ -15,5 +12,4 @@ chpwd_functions=( auto-ls $chpwd_functions )
 # load aliases
 source ~/.zsh-aliases.sh
 
-# load tmuxinator
-source ~/tmuxinator.zsh
+export PATH=/opt/homebrew/bin:$PATH
