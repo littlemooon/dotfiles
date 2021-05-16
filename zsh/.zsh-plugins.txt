@@ -1,13 +1,11 @@
 mafredri/zsh-async
 
 Tarrasch/zsh-command-not-found
-akoenig/npm-run.plugin.zsh
 molovo/tipz
 rupa/z
 sindresorhus/pretty-time-zsh
 sindresorhus/pure
 tarruda/zsh-autosuggestions
-tomsquest/nvm-auto-use.zsh
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-syntax-highlighting
