@@ -1,7 +1,7 @@
 #aliases
 
 alias .='cd ..'
-alias zshrc='vim ~/.zsh-aliases'
+alias zshrc='vim ~/.zsh_aliases'
 alias rezsh='source ~/.zshrc'
 alias cl='clear'
 alias mux='tmuxinator'

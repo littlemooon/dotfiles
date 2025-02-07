@@ -1,4 +1,4 @@
 echo '--- zsh'
 
-brew install getantibody/tap/antibody
+brew install antidote
 cp -a ~/a/dotfiles/zsh/. ~/

@@ -6,15 +6,15 @@ Simple dotfiles used to get my web development environment up and running on OSX
 
 Programs:
 - [homebrew](http://brew.sh)
-- [zsh](https://en.wikipedia.org/wiki/Z_shell) with [antibody](http://getantibody.github.io/)
+- [zsh](https://en.wikipedia.org/wiki/Z_shell) with [antidote](https://antidote.sh/)
 - [vs code](https://code.visualstudio.com/) for react development
 - [some apps](https://github.com/littlemooon/dotfiles/blob/master/install_apps.sh) - [more](https://caskroom.github.io/search)
 
 Plugins:
-- [antibody zsh plugins](https://github.com/littlemooon/dotfiles/blob/master/zsh/.zsh-plugins.txt) - [more](https://github.com/unixorn/awesome-zsh-plugins#plugins)
+- [antidote zsh plugins](https://github.com/littlemooon/dotfiles/blob/master/zsh/.zsh_plugins.txt) - [more](https://github.com/unixorn/awesome-zsh-plugins#plugins)
 
 Aliases:
-- [detailed here](https://github.com/littlemooon/dotfiles/blob/master/zsh/.zsh-aliases.sh)
+- [detailed here](https://github.com/littlemooon/dotfiles/blob/master/zsh/.zsh_aliases.sh)
 
 #### Installation
 

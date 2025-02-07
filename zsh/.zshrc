@@ -1,15 +1,14 @@
 export EDITOR='vim'
 
-# load antibody plugins
-source <(antibody init)
-antibody bundle < ~/.zsh-plugins.txt >> ~/.zsh-sourceables.sh
-source ~/.zsh-sourceables.sh
+# load antidote plugins
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
 
 # automatic ls on cd
 auto-ls () { ls; }
 chpwd_functions=( auto-ls $chpwd_functions )
 
 # load aliases
-source ~/.zsh-aliases.sh
+source ~/.zsh_aliases.sh
 
 export PATH=/opt/homebrew/bin:$PATH
