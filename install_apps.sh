@@ -8,3 +8,4 @@ brew install --cask slack
 brew install --cask spotify
 brew install --cask visual-studio-code
 brew install --cask vlc
+brew install tw93/tap/mole
