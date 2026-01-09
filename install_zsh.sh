@@ -1,4 +1,9 @@
+#!/bin/bash
+set -e
+
 echo '--- zsh'
 
-brew install antidote
-cp -a ~/a/dotfiles/zsh/. ~/
+cd ~/a/dotfiles
+stow -t ~ zsh
+
+echo 'Zsh config stowed'

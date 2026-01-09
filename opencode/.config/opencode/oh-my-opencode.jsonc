@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "google_auth": false,
+  "experimental": {
+    "preemptive_compaction": true,
+    "preemptive_compaction_threshold": 0.8,
+    "aggressive_truncation": true,
+    "auto_resume": true,
+    "dcp_for_compaction": true
+  },
+  "agents": {
+    "frontend-ui-ux-engineer": {
+      "model": "opencode/gemini-3-pro"
+    },
+    "document-writer": {
+      "model": "opencode/gemini-3-flash"
+    },
+    "multimodal-looker": {
+      "model": "opencode/gemini-3-flash"
+    }
+  }
+}

@@ -1,9 +1,0 @@
-# theme = dark:catppuccin-mocha,light:catppuccin-latte
-# theme = dark:3024 night,light:3024 day
-# theme = dark:adwaita dark,light:adwaita
-# theme = dark:blulocodark,light:blulocolight
-# theme = dark:flexoki-dark,light:flexoki-light
-theme = flexoki-dark
-
-font-family = "Fira Code"
-font-thicken = true

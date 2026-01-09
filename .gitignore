@@ -1,1 +1,4 @@
 .DS_Store
+*.local.json
+Brewfile.lock.json
+vscode-extensions.txt

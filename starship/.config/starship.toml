@@ -1,0 +1,31 @@
+# Starship prompt config
+# https://starship.rs/config/
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$character"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+format = "[$branch]($style) "
+style = "purple"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "red"
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+symbol = ""
+style = "green"
+detect_files = ["package.json"]
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"

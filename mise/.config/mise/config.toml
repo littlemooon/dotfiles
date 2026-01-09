@@ -1,0 +1,6 @@
+[tools]
+node = "latest"
+bun = "latest"
+
+[settings]
+experimental = true
