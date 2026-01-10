@@ -3,8 +3,10 @@
 	autoSetupRemote = true
 
 [user]
-	name = fred wright
-	email = fredwright0@gmail.com
+	# Personal git config should be set in ~/.gitconfig.local
+	# Example:
+	# name = Your Name
+	# email = your.email@example.com
 
 [credential]
 	helper = osxkeychain

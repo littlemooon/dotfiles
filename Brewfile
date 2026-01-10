@@ -22,6 +22,8 @@ brew "eza"       # ls replacement - icons, git status
 brew "bat"       # cat replacement - syntax highlighting
 brew "fd"        # find replacement - simpler, faster
 brew "git-delta" # diff replacement - better git diffs
+brew "btop"      # top replacement - better system monitor
+brew "procs"     # ps replacement - better process viewer
 
 # Apps (casks)
 cask "1password"
@@ -37,5 +39,4 @@ cask "claude"
 # Custom taps
 brew "tw93/tap/mole"
 
-# Mac App Store apps (uncomment and add app IDs as needed)
-# mas "Xcode", id: 497799835
+

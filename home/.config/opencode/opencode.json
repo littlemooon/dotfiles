@@ -9,6 +9,7 @@
     "bash": {
       "bd *": "allow",
       "echo *": "allow",
+      "ssh tradie-prod": "allow",
       "gh *": "allow"
     }
   },

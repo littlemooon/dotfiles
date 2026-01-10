@@ -2,7 +2,8 @@
 
 alias o=opencode
 alias c=claude
-alias zshrc='vim ~/.zsh-aliases.sh'
+alias zshrc='vim ~/.zshrc'
+alias zshal='vim ~/.zsh-aliases.sh'
 alias rezsh='source ~/.zshrc'
 alias cl='clear'
 alias wifi='wifi-password'
@@ -13,6 +14,9 @@ alias ll='eza -la --git'
 alias lt='eza -la --git --tree --level=2'
 alias cat='bat --paging=never'
 alias find='fd'
+alias grep='rg'
+alias top='btop'
+alias ps='procs'
 
 # navigation
 alias ..='cd ..'
@@ -27,11 +31,12 @@ zc () { git checkout $1; }
 zb () { git checkout -b $1 -t dev; }
 zm () { git commit -m "$*"; }
 zp () { git push --follow-tags -u origin $(current_branch); }
-zap () {
+git_commit_and_push () {
     za
     zm "$*"
     zp
 }
+alias gcap='git_commit_and_push'
 
 alias zs='git status'
 alias za='git add --all'
