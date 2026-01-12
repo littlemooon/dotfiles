@@ -10,7 +10,7 @@ setopt SHARE_HISTORY         # share history between sessions
 
 # load antidote plugins
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
-antidote load
+antidote load ~/.zsh-plugins.txt
 
 # load aliases
 source ~/.zsh-aliases.sh
@@ -32,3 +32,13 @@ export PATH=$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 
 # docker (added by Docker Desktop)
 [ -f "$HOME/.docker/init-zsh.sh" ] && source "$HOME/.docker/init-zsh.sh"
+
+# bun completions
+[ -s "/Users/fred/.bun/_bun" ] && source "/Users/fred/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by Ultimate Bug Scanner Installer
+alias bash='/opt/homebrew/bin/bash'

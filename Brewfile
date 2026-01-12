@@ -10,7 +10,6 @@ brew "fzf"
 brew "antidote"
 brew "mas"
 brew "stow"
-brew "opencode"
 brew "jj"
 
 # Modern replacements
@@ -34,9 +33,7 @@ cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 cask "vlc"
-cask "claude"
 
 # Custom taps
 brew "tw93/tap/mole"
-
-
+brew "anomalyco/tap/opencode"

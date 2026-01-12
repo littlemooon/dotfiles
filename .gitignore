@@ -2,3 +2,6 @@
 *.local.json
 Brewfile.lock.json
 vscode-extensions.txt
+home/.config/gh/hosts.yml
+home/.ssh/known_hosts
+home/.ssh/known_hosts.old
